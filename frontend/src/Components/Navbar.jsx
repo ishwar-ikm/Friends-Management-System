@@ -5,7 +5,7 @@ import { FaRegSun } from "react-icons/fa6";
 import CreateUserModel from './CreateUserModel';
 
 
-const Navbar = () => {
+const Navbar = ({setUsers}) => {
     const { colorMode, toggleColorMode } = useColorMode()
     return (
         <Container>
@@ -35,7 +35,7 @@ const Navbar = () => {
                         <Button onClick={toggleColorMode}>
                             {colorMode === "light" ? <IoMoon size={20}/> : <FaRegSun size={20}/>}
                         </Button>
-                        <CreateUserModel />
+                        <CreateUserModel setUsers={setUsers}/>
                     </Flex>
                 </Flex>
             </Box>
